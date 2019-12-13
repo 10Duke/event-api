@@ -3,16 +3,16 @@ package com.tenduke.events.api.model;
 import java.util.UUID;
 
 /**
- *
+ * Data structure containing data of an event stored by 10Duke Event Data service.
+ * All events have a common envelope with common metadata fields. The {@code data}
+ * field contains the actual event data payload, the other top-level fields
+ * are these metadata fields.
+ * @param <D> Type of the {@code data} object carrying the event data payload.
  * @author jarkko
  */
-public class Event {
-
-    //<editor-fold defaultstate="collapsed" desc="private fields">
+public class Event<D> extends AbstractEventFeedItem {
 
     private UUID eventId;
-
-    private String eventType;
 
     private String eventObjectId;
 
@@ -22,20 +22,14 @@ public class Event {
 
     private Long eventReceived;
 
-    //</editor-fold>
-
-    //<editor-fold defaultstate="collapsed" desc="constructors">
+    private D data;
 
     /**
      * Initializes a new instance of the Event class.
      */
     public Event() {
-        //
+        super();
     }
-
-    //</editor-fold>
-
-    //<editor-fold defaultstate="collapsed" desc="methods">
 
     /**
      * <p>
@@ -45,7 +39,7 @@ public class Event {
      * When sending events to 10Duke Event Data, setting event id is optional.
      * If {@code eventId} is not specified, Event Data will generate an id.
      * </p>
-     * @return The event id.
+     * @return The event id, or {@code null} if not specified.
      */
     public UUID getEventId() {
         return eventId;
@@ -59,82 +53,133 @@ public class Event {
      * When sending events to 10Duke Event Data, setting event id is optional.
      * If {@code eventId} is not specified, Event Data will generate an id.
      * </p>
-     * @param eventId The event id.
+     * @param eventId The event id, or {@code null} if not specified.
      */
     public void setEventId(final UUID eventId) {
         this.eventId = eventId;
     }
 
     /**
-     * Gets the event type.
-     * @return The event type.
-     */
-    public String getEventType() {
-        return eventType;
-    }
-
-    /**
-     * @param eventType the eventType to set
-     */
-    public void setEventType(final String eventType) {
-        this.eventType = eventType;
-    }
-
-    /**
-     * @return the eventObjectId
+     * <p>
+     * Gets id of an external entity that the event is related to.
+     * </p>
+     * <p>
+     * Full key for identifying an external entity or reference consists of both
+     * {@code eventObjectType} and {@code eventObjectId}. When one of them is set,
+     * the other one must be set as well.
+     * </p>
+     * @return The external entity id or a reference id, or {@code null} if there is
+     *      no external related entity.
      */
     public String getEventObjectId() {
         return eventObjectId;
     }
 
     /**
-     * @param eventObjectId the eventObjectId to set
+     * <p>
+     * Sets id of an external entity that the event is related to.
+     * </p>
+     * <p>
+     * Full key for identifying an external entity or reference consists of both
+     * {@code eventObjectType} and {@code eventObjectId}. When one of them is set,
+     * the other one must be set as well.
+     * </p>
+     * @param eventObjectId The external entity id or a reference id, or {@code null} if there is
+     *      no external related entity.
      */
     public void setEventObjectId(final String eventObjectId) {
         this.eventObjectId = eventObjectId;
     }
 
     /**
-     * @return the eventObjectType
+     * <p>
+     * Gets type of an external entity that the event is related to.
+     * </p>
+     * <p>
+     * Full key for identifying an external entity or reference consists of both
+     * {@code eventObjectType} and {@code eventObjectId}. When one of them is set,
+     * the other one must be set as well.
+     * </p>
+     * @return The external entity type or reference type, or {@code null} if there
+     *      is no external related entity.
      */
     public String getEventObjectType() {
         return eventObjectType;
     }
 
     /**
-     * @param eventObjectType the eventObjectType to set
+     * <p>
+     * Sets type of an external entity that the event is related to.
+     * </p>
+     * <p>
+     * Full key for identifying an external entity or reference consists of both
+     * {@code eventObjectType} and {@code eventObjectId}. When one of them is set,
+     * the other one must be set as well.
+     * </p>
+     * @param eventObjectType The external entity type or reference type, or {@code null} if there
+     *      is no external related entity.
      */
     public void setEventObjectType(final String eventObjectType) {
         this.eventObjectType = eventObjectType;
     }
 
     /**
-     * @return the eventSourceId
+     * Gets name or identifier of system producing the event. Client applications sending
+     * events to the 10Duke Event Data system must be coordinated so that {@code eventSourceId}
+     * values are unique across all clients.
+     * @return The event source id.
      */
     public String getEventSourceId() {
         return eventSourceId;
     }
 
     /**
-     * @param eventSourceId the eventSourceId to set
+     * Sets name or identifier of system producing the event. Client applications sending
+     * events to the 10Duke Event Data system must be coordinated so that {@code eventSourceId}
+     * values are unique across all clients.
+     * @param eventSourceId The event source id.
      */
     public void setEventSourceId(final String eventSourceId) {
         this.eventSourceId = eventSourceId;
     }
 
     /**
-     * @return the eventReceived
+     * Gets timestamp when the event has been received by the 10Duke Event Data service.
+     * The value is generated by the 10Duke Event Data service when event is received,
+     * and must not be set by client that sends events.
+     * @return Timestamp value in nanoseconds since the Epoch (1970-01-01T00:00:00Z).
+     *      Must be {@code null} when sending events to the 10Duke Event Data service.
      */
     public Long getEventReceived() {
         return eventReceived;
     }
 
     /**
-     * @param eventReceived the eventReceived to set
+     * Sets timestamp when the event has been received by the 10Duke Event Data service.
+     * The value is generated by the 10Duke Event Data service when event is received,
+     * and must not be set by client that sends events.
+     * @param eventReceived Timestamp value in nanoseconds since the Epoch (1970-01-01T00:00:00Z).
+     *      Must be {@code null} when sending events to the 10Duke Event Data service.
      */
     public void setEventReceived(final Long eventReceived) {
         this.eventReceived = eventReceived;
     }
 
-    //</editor-fold>
+    /**
+     * Gets object representing the event payload. All the other fields of the {@link Event} object
+     * are an envelope and common metadata, {@code data} holds the actual event data.
+     * @return The event payload object.
+     */
+    public D getData() {
+        return data;
+    }
+
+    /**
+     * Sets object representing the event payload. All the other fields of the {@link Event} object
+     * are an envelope and common metadata, {@code data} holds the actual event data.
+     * @param data The event payload object.
+     */
+    public void setData(final D data) {
+        this.data = data;
+    }
 }
