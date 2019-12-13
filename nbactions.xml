@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Clean and build no QA</actionName>
+            <displayName>Clean and build no QA</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+            </goals>
+            <activatedProfiles>
+                <activatedProfile>noQA</activatedProfile>
+            </activatedProfiles>
+        </action>
+        <action>
+            <actionName>CUSTOM-Generate site</actionName>
+            <displayName>Generate site</displayName>
+            <goals>
+                <goal>site</goal>
+            </goals>
+        </action>
+    </actions>
