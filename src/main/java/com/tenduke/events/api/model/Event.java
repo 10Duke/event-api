@@ -3,10 +3,20 @@ package com.tenduke.events.api.model;
 import java.util.UUID;
 
 /**
+ * <p>
  * Data structure containing data of an event stored by 10Duke Event Data service.
  * All events have a common envelope with common metadata fields. The {@code data}
  * field contains the actual event data payload, the other top-level fields
  * are these metadata fields.
+ * </p>
+ * <p>
+ * This object describes the recommended event structure where envelope and data
+ * are separated. The envelope fields are specified by 10Duke Event Data as reflected
+ * by this object, but using field named {@code data} for the event data payload
+ * is just a recommended convention. 10Duke Event Data would allow any fields as
+ * siblings of the envelope field, and it would also be possible to have a flat structure
+ * where all event data payload fields would be root level fields.
+ * </p>
  * @param <D> Type of the {@code data} object carrying the event data payload.
  * @author jarkko
  */
