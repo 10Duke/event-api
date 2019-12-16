@@ -48,6 +48,10 @@ public class Event<D> extends AbstractEventFeedItem {
      * <p>
      * When sending events to 10Duke Event Data, setting event id is optional.
      * If {@code eventId} is not specified, Event Data will generate an id.
+     * Event Data does not enforce uniqueness of the ids. If using ids generated
+     * by Event Data, there is a high probability that the generated UUIDs are unique.
+     * If client generates ids, it is on the clients responsibility to take care
+     * of uniqueness of the ids.
      * </p>
      * @return The event id, or {@code null} if not specified.
      */
@@ -62,6 +66,10 @@ public class Event<D> extends AbstractEventFeedItem {
      * <p>
      * When sending events to 10Duke Event Data, setting event id is optional.
      * If {@code eventId} is not specified, Event Data will generate an id.
+     * Event Data does not enforce uniqueness of the ids. If using ids generated
+     * by Event Data, there is a high probability that the generated UUIDs are unique.
+     * If client generates ids, it is on the clients responsibility to take care
+     * of uniqueness of the ids.
      * </p>
      * @param eventId The event id, or {@code null} if not specified.
      */
