@@ -34,6 +34,8 @@ public class Event<D> extends AbstractEventFeedItem {
 
     private D data;
 
+    private String eventKeyId;
+
     /**
      * Initializes a new instance of the Event class.
      */
@@ -199,5 +201,55 @@ public class Event<D> extends AbstractEventFeedItem {
      */
     public void setData(final D data) {
         this.data = data;
+    }
+
+    /**
+     * <p>
+     * Gets identifier of key used for encrypting {@code data}.
+     * </p>
+     * <p>
+     * Client that sends events may encrypt fields of {@code data}, 10Duke Event Data
+     * itself does not encrypt. This field is provider as a standard field to allow
+     * clients to specify key ids and to enable decryption tools to find the key if
+     * necessary.
+     * </p>
+     * <p>
+     * Clients are recommended to use user specific encryption keys to encrypt all sensitive
+     * user data. When a user is deleted from the client system, the encryption key is also
+     * deleted and the encrypted data stored in 10Duke Event Data will become inaccessible.
+     * </p>
+     * <p>
+     * Example: <code>eventkey://my-client/user/12345678</code>
+     * </p>
+     * @return String used by the client for identifying event data encryption key,
+     *      or {@code null} if no encryption used.
+     */
+    public String getEventKeyId() {
+        return eventKeyId;
+    }
+
+    /**
+     * <p>
+     * Sets identifier of key used for encrypting {@code data}.
+     * </p>
+     * <p>
+     * Client that sends events may encrypt fields of {@code data}, 10Duke Event Data
+     * itself does not encrypt. This field is provider as a standard field to allow
+     * clients to specify key ids and to enable decryption tools to find the key if
+     * necessary.
+     * </p>
+     * <p>
+     * Clients are recommended to use user specific encryption keys to encrypt all sensitive
+     * user data. When a user is deleted from the client system, the encryption key is also
+     * deleted and the encrypted data stored in 10Duke Event Data will become inaccessible.
+     * </p>
+     * <p>
+     * Example: <code>eventkey://my-client/user/12345678</code>
+     * </p>
+     * @param eventKeyId String used by the client for identifying event data encryption key,
+     *      or {@code null} if no encryption used.
+     */
+    public void setEventKeyId(final String eventKeyId) {
+        this.eventKeyId = eventKeyId;
     }
 }
