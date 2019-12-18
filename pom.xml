@@ -4,7 +4,7 @@
 
     <groupId>com.tenduke.events</groupId>
     <artifactId>events-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>10Duke Event Data API model</name>
@@ -155,6 +155,11 @@
     </build>
 
     <profiles>
+
+        <!--
+            Activate release profile when releasing to Maven Central. Example command:
+            mvn deploy -Drelease -Dgpg.keyname=46E39E...
+        -->
         <profile>
             <id>release</id>
 
