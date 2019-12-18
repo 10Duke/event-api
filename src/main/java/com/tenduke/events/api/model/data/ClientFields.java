@@ -1,7 +1,7 @@
 package com.tenduke.events.api.model.data;
 
 /**
- * Event data fields related to client application (in practice OAuth client)
+ * Event data fields related to client application (in practice OAuth client or SAML SP)
  * connected to the event sender system (which itself is a client to 10Duke Event Data).
  * @author jarkko
  */
@@ -9,8 +9,7 @@ public interface ClientFields {
 
     /**
      * <p>
-     * Gets identifier of a client application that end user has used for sending
-     * request to the system that created the event.
+     * Gets identifier of a client application related to the event.
      * </p>
      * <p>
      * It is recommended that a permanent id used by the event sender system is used
