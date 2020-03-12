@@ -4,7 +4,7 @@
 
     <groupId>com.tenduke.events</groupId>
     <artifactId>events-api</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>jar</packaging>
 
     <name>10Duke Event Data API model</name>
@@ -58,10 +58,19 @@
         <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
         <versions-maven-plugin.version>2.7</versions-maven-plugin.version>
 
+        <tenduke.jackson.version>2.6.7</tenduke.jackson.version>
+
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${tenduke.jackson.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>

@@ -1,11 +1,13 @@
 package com.tenduke.events.api.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.net.URI;
 
 /**
  * Instruction describing how to access older or newer feed events.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EventFeedInstruction extends AbstractEventFeedItem {
 
     /**

@@ -1,5 +1,6 @@
 package com.tenduke.events.api.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.UUID;
 
 /**
@@ -20,6 +21,7 @@ import java.util.UUID;
  * @param <D> Type of the {@code data} object carrying the event data payload.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Event<D> extends AbstractEventFeedItem {
 
     private UUID eventId;

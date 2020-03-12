@@ -1,5 +1,6 @@
 package com.tenduke.events.api.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.net.URI;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import java.util.List;
  * Object encapsulating result of event listing operations.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Feed {
 
     private URI uri;
