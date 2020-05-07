@@ -38,6 +38,8 @@ public class Event<D> extends AbstractEventFeedItem {
 
     private String eventKeyId;
 
+    private String version;
+
     /**
      * Initializes a new instance of the Event class.
      */
@@ -253,5 +255,21 @@ public class Event<D> extends AbstractEventFeedItem {
      */
     public void setEventKeyId(final String eventKeyId) {
         this.eventKeyId = eventKeyId;
+    }
+
+    /**
+     * Gets version of event schema that the event conforms to.
+     * @return The event schema version.
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * Sets version of event schema that the event conforms to.
+     * @param version The event schema version.
+     */
+    public void setVersion(final String version) {
+        this.version = version;
     }
 }

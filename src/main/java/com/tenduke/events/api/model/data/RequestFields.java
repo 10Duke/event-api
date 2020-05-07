@@ -1,9 +1,12 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Event data fields for identifying the request related to the event.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface RequestFields {
     /**
      * <p>

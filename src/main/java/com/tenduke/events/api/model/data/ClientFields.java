@@ -1,10 +1,13 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Event data fields related to client application (in practice OAuth client or SAML SP)
  * connected to the event sender system (which itself is a client to 10Duke Event Data).
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface ClientFields {
 
     /**

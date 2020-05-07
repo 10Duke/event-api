@@ -1,21 +1,13 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Event data fields related to end user.
  * @author jarkko
  */
-public interface UserFields {
-
-    /**
-     * <p>
-     * Gets identifier of the user in the client system.
-     * </p>
-     * <p>
-     * This user id should be permanent.
-     * </p>
-     * @return The client user id.
-     */
-    String getUserId();
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public interface UserFields extends UserIdFields {
 
     /**
      * Indicates if the user is a technical user.

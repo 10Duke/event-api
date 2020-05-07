@@ -1,9 +1,12 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Interface for error information object.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface ErrorInfo {
 
     /**

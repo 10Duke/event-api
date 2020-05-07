@@ -1,9 +1,12 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Event data fields related to event time.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface TimeFields {
 
     /**

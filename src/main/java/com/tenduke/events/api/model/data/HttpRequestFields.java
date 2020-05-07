@@ -1,10 +1,13 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Event data fields related to HTTP channel, or commonly used when tracking events
  * triggered by HTTP requests.
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface HttpRequestFields extends RequestFields {
 
     /**

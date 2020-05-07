@@ -1,10 +1,13 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * Event data fields related to an external identity provider (in practice OpenID Connect
  * or SAML identity provider).
  * @author jarkko
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface ProviderFields {
 
     /**
