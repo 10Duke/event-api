@@ -2,6 +2,7 @@ package com.tenduke.events.api.model.object.audit;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tenduke.events.api.model.data.RequestFields;
+import com.tenduke.events.api.model.data.TimeFields;
 
 /**
  * Resource deleted.
@@ -9,5 +10,5 @@ import com.tenduke.events.api.model.data.RequestFields;
  * @author jarkko
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface Deleted<R> extends RequestFields {
+public interface Deleted<R> extends TimeFields, RequestFields {
 }
