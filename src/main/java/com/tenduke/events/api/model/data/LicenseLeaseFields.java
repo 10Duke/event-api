@@ -1,11 +1,13 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.List;
 
 /**
  * Event data fields for license operations that contain lease data.
  * @author roope
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface LicenseLeaseFields extends LicenseFields {
 
     /**
