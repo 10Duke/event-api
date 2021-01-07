@@ -3,7 +3,7 @@ package com.tenduke.events.api.model.data;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * Event data fields related to all licensing events.
+ * Event data fields related and included to all licensing events.
  * @author roope
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
