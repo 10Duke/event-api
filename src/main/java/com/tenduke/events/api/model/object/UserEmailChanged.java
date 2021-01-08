@@ -8,11 +8,11 @@ import com.tenduke.events.api.model.data.TimeFields;
 import com.tenduke.events.api.model.data.UserIdFields;
 
 /**
- * User data updated.
- * @author jarkko
+ * User email changed.
+ * @author roope
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface UserUpdated extends
+public interface UserEmailChanged extends
         TimeFields,
         RequestFields,
         ErrorInfoFields,
