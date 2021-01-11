@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author roope
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface OrganizationFields {
+public interface OrganizationInvitationFields {
 
     /**
      * Gets the organization invitation id.
