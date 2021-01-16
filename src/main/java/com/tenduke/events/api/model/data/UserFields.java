@@ -10,12 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public interface UserFields extends UserIdFields {
 
     /**
-     * Indicates if the user is a technical user.
-     * @return {@code true} if {@code userId} is known to refer to a technical user.
-     */
-    Boolean isTechnicalUser();
-
-    /**
      * Gets user name used by the end user in the client system.
      * @return The user name.
      */
