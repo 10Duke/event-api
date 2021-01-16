@@ -20,5 +20,5 @@ public interface LicenseLeaseFields extends LicenseFields {
      * Gets the license anchors that a license can be tied to.
      * @return the license anchors.
      */
-    List<Object> getLicenseAnchors();
+    List<LicenseAnchorIdFields> getLicenseAnchors();
 }

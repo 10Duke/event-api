@@ -3,7 +3,7 @@ package com.tenduke.events.api.model.data;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * Event data user id field.
+ * Event data user identification fields.
  * @author jarkko
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
