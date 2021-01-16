@@ -10,12 +10,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public interface UserFields extends UserIdFields {
 
     /**
-     * Gets user name used by the end user in the client system.
-     * @return The user name.
-     */
-    String getUserName();
-
-    /**
      * Gets id of authenticated session established when user authenticates herself.
      * @return The authenticated session id.
      */
