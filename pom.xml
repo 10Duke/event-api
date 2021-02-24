@@ -62,7 +62,9 @@
 
         <tenduke.jackson.version>2.6.7</tenduke.jackson.version>
 
+        <!-- Test dependencies -->
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
+        <tenduke.classgraph.version>4.8.102</tenduke.classgraph.version>
     </properties>
 
     <dependencies>
@@ -73,6 +75,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.classgraph</groupId>
+            <artifactId>classgraph</artifactId>
+            <version>${tenduke.classgraph.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
