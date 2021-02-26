@@ -6,6 +6,12 @@ Common API for using the Event Data service.
 
 Events described by this schema are listed below by category. Please notice that some events could belong to multiple categories, but here each event is listed in just one category according to the most common use case.
 
+> :warning: **Events may contain additional fields and some fields may not be populated in all cases**
+>
+> Clients reading and handling these events must allow fields that are not included in this documentation. 10Duke applications may add new fields, for example by customer specific extensions.
+>
+> For some rare cases it is also possible that some of the described fields are not populated, for example fields may be filtered out for privacy reasons.
+
 ### User management
 
 Events related to user management.
