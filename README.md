@@ -12,6 +12,24 @@ Events described by this schema are listed below by category. Please notice that
 >
 > For some rare cases it is also possible that some of the described fields are not populated, for example fields may be filtered out for privacy reasons.
 
+### Envelope
+
+All events consist of an *envelope* and the *event data*. The envelope means a set of standard root level event fields. One of these fields is *data* for the different event data objects.
+
+This chapter describes the envelope fields. Rest of the chapters below describe the event data objects, i.e. objects that can be set as value of the *data* envelope field.
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| eventType | String | Event type |
+| eventId | String | Event id |
+| eventObjectId | String | Id of object that the event primarily relates to. Events sent by 10Duke Identity-based Entitlement set this to id of the actor whose action triggered the event, if an authenticated actor exists. |
+| eventObjectType | String | Type of object that the event primarily relates to. Events sent by 10Duke Identity-based Entitlement set this to "user", if an authenticated actor exists. |
+| eventSourceId | String | Identifier or name of the system that sent the event |
+| eventReceived | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| eventKeyId | String | Id of encryption key, used if encrypting the event data |
+| version | String | Version of the event data schema that the event conforms to. |
+| data | Object | The event data object. Common event data object types are described in the chapters below. |
+
 ### User management
 
 Events related to user management.
