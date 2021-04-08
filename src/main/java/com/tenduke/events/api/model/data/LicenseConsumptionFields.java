@@ -32,4 +32,10 @@ public interface LicenseConsumptionFields extends LicenseLeaseFields {
      * @return the licensed item name.
      */
     String getLicensedItemName();
+
+    /**
+     * Gets latest time when the granted lease can be used by the client.
+     * @return Lease expiration in milliseconds since the Epoch (1970-01-01T00:00:00Z).
+     */
+    Long getGrantedUntil();
 }
