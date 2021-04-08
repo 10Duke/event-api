@@ -431,6 +431,7 @@ Events related to end users and client applications consuming licenses.
 | leaseId | String | Lease id |
 | consumptionMode | String | Consumption mode: "cache" for online use or "checkout" for offline use |
 | consumedVersion | String | Consumed version |
+| grantedUntil | Long | Latest time that consumption is allowed by the granted lease, milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | licensedItemName | String | Licensed item name |
 | consumptionId | String | Consumption id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
@@ -454,6 +455,7 @@ Events related to end users and client applications consuming licenses.
 | leaseId | String | Lease id |
 | consumptionMode | String | Consumption mode: "cache" for online use or "checkout" for offline use |
 | consumedVersion | String | Consumed version |
+| grantedUntil | Long | Latest time that consumption is allowed by the granted lease, milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | licensedItemName | String | Licensed item name |
 | consumptionId | String | Consumption id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
