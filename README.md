@@ -44,6 +44,7 @@ Events related to user management.
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -58,6 +59,7 @@ Events related to user management.
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -72,6 +74,7 @@ Events related to user management.
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -87,6 +90,7 @@ Events related to user management.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserDeleted
 
@@ -99,6 +103,7 @@ Events related to user management.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserInvitedAndPreRegistered
 
@@ -110,6 +115,7 @@ Events related to user management.
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -125,6 +131,7 @@ Events related to user management.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserUpdated
 
@@ -137,6 +144,7 @@ Events related to user management.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | oldUserName | String | Previous user name |
 
 #### UserValidationEmailSent
@@ -150,6 +158,7 @@ Events related to user management.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 ### User actions
 
@@ -166,6 +175,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
 | validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
 
@@ -180,6 +190,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### OrganizationInvitationAccepted
 
@@ -191,6 +202,7 @@ Events for actions that user has done in the system.
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -205,6 +217,7 @@ Events for actions that user has done in the system.
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -220,6 +233,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | remember | Boolean | true if user specified preference for remembering the authentication, false or unspecified otherwise |
 
 #### UserEmailChanged
@@ -233,6 +247,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | oldUserName | String | Previous username |
 
 #### UserLoggedOut
@@ -246,6 +261,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserMfaActivated
 
@@ -258,6 +274,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserMfaDeactivated
 
@@ -270,6 +287,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserPasswordChanged
 
@@ -282,6 +300,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserRecoveryEmailAdded
 
@@ -294,6 +313,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserRegistered
 
@@ -306,6 +326,7 @@ Events for actions that user has done in the system.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 
 ### License provisioning
 
@@ -327,6 +348,7 @@ Events related to license provisioning.
 | seatCount | Integer | Granted seat count |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -347,6 +369,7 @@ Events related to license provisioning.
 | seatCount | Integer | Revoked seat count |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -370,6 +393,7 @@ Events related to license management.
 | assignmentId | String | Assignment id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -389,6 +413,7 @@ Events related to license management.
 | assignmentId | String | Assignment id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -408,6 +433,7 @@ Events related to license management.
 | assignmentId | String | Assignment id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -436,6 +462,7 @@ Events related to end users and client applications consuming licenses.
 | consumptionId | String | Consumption id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -460,6 +487,7 @@ Events related to end users and client applications consuming licenses.
 | consumptionId | String | Consumption id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -479,6 +507,7 @@ Events related to end users and client applications consuming licenses.
 | leaseId | String | Lease id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -504,6 +533,7 @@ Technical events.
 | url | String | Request URL |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | authenticatedSessionId | String | Authenticated session id |
 | clientApplicationType | String | Client application type, or unspecified if not a client application request |
 | clientApplicationId | String | Client application id, or unspecified if not a client application request |
@@ -527,6 +557,7 @@ Audit trail events.
 | requestId | String | Request id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 | modifiedFields | Object | Map with modified object fields |
@@ -541,6 +572,7 @@ Audit trail events.
 | requestId | String | Request id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 
@@ -554,6 +586,7 @@ Audit trail events.
 | requestId | String | Request id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 
@@ -567,6 +600,7 @@ Audit trail events.
 | requestId | String | Request id |
 | technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 | modifiedFields | Object | Map with modified object fields |

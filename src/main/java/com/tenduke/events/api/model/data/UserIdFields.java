@@ -10,8 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public interface UserIdFields {
 
     /**
-     * Indicates if the user is a technical user.
+     * Indicates if the user is a technical user. THIS FIELD TO BE DEPRECATED AS BEING REPLACED WITH userType. 
      * @return {@code true} if {@code userId} is known to refer to a technical user.
+     *
      */
     Boolean isTechnicalUser();
 
@@ -25,4 +26,14 @@ public interface UserIdFields {
      * @return The client user id.
      */
     String getUserId();
+
+    /**
+     * <p>
+     * Gets type of the user.
+     * </p>
+     * <p>
+     * </p>
+     * @return The user type.
+     */
+    String getUserType();
 }
