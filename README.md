@@ -42,8 +42,9 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -56,8 +57,9 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -70,8 +72,9 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -85,8 +88,9 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserDeleted
 
@@ -97,8 +101,9 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserInvitedAndPreRegistered
 
@@ -108,8 +113,9 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -123,8 +129,9 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserUpdated
 
@@ -135,8 +142,9 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | oldUserName | String | Previous user name |
 
 #### UserValidationEmailSent
@@ -148,8 +156,9 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 ### User actions
 
@@ -164,8 +173,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
 | validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
 
@@ -178,8 +188,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### OrganizationInvitationAccepted
 
@@ -189,8 +200,9 @@ Events for actions that user has done in the system.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -203,8 +215,9 @@ Events for actions that user has done in the system.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
@@ -218,8 +231,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | remember | Boolean | true if user specified preference for remembering the authentication, false or unspecified otherwise |
 
 #### UserEmailChanged
@@ -231,8 +245,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | oldUserName | String | Previous username |
 
 #### UserLoggedOut
@@ -244,8 +259,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserMfaActivated
 
@@ -256,8 +272,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserMfaDeactivated
 
@@ -268,8 +285,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserPasswordChanged
 
@@ -280,8 +298,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserRecoveryEmailAdded
 
@@ -292,8 +311,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 #### UserRegistered
 
@@ -304,8 +324,9 @@ Events for actions that user has done in the system.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 
 ### License provisioning
 
@@ -325,8 +346,9 @@ Events related to license provisioning.
 | useTime | Long | Granted use time |
 | useCount | Long | Granted use count |
 | seatCount | Integer | Granted seat count |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -345,8 +367,9 @@ Events related to license provisioning.
 | useTime | Long | Revoked use time |
 | useCount | Long | Revoked use count |
 | seatCount | Integer | Revoked seat count |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -368,8 +391,9 @@ Events related to license management.
 | entitlementId | String | Entitlement id |
 | reservationType | String | Reservation type: "reserved", "denied" or unspecified for floating |
 | assignmentId | String | Assignment id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -387,8 +411,9 @@ Events related to license management.
 | entitlementId | String | Entitlement id |
 | reservationType | String | Reservation type: "reserved", "denied" or unspecified for floating |
 | assignmentId | String | Assignment id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -406,8 +431,9 @@ Events related to license management.
 | entitlementId | String | Entitlement id |
 | reservationType | String | Reservation type: "reserved", "denied" or unspecified for floating |
 | assignmentId | String | Assignment id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -434,8 +460,9 @@ Events related to end users and client applications consuming licenses.
 | grantedUntil | Long | Latest time that consumption is allowed by the granted lease, milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | licensedItemName | String | Licensed item name |
 | consumptionId | String | Consumption id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -458,8 +485,9 @@ Events related to end users and client applications consuming licenses.
 | grantedUntil | Long | Latest time that consumption is allowed by the granted lease, milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | licensedItemName | String | Licensed item name |
 | consumptionId | String | Consumption id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -477,8 +505,9 @@ Events related to end users and client applications consuming licenses.
 | entitlementId | String | Entitlement id |
 | licenseAnchors | List | List of [LicenseAnchorIdFields](#licenseanchoridfields) objects |
 | leaseId | String | Lease id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -502,8 +531,9 @@ Technical events.
 | referer | String | HTTP referer |
 | userAgent | String | User agent |
 | url | String | Request URL |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | authenticatedSessionId | String | Authenticated session id |
 | clientApplicationType | String | Client application type, or unspecified if not a client application request |
 | clientApplicationId | String | Client application id, or unspecified if not a client application request |
@@ -525,8 +555,9 @@ Audit trail events.
 | ---        | ---  | ---         |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 | modifiedFields | Object | Map with modified object fields |
@@ -539,8 +570,9 @@ Audit trail events.
 | ---        | ---  | ---         |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 
@@ -552,8 +584,9 @@ Audit trail events.
 | ---        | ---  | ---         |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 
@@ -565,8 +598,9 @@ Audit trail events.
 | ---        | ---  | ---         |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
-| technicalUser | Boolean | true if userId represents a technical user, false or not specified otherwise |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
+| userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
 | modifiedFields | Object | Map with modified object fields |
