@@ -66,7 +66,7 @@ Events related to user management.
 
 #### OrganizationInvitationTokenGenerated
 
-*A new invitation token has been generated. Typically this token has been delivered to an invitee by some means.*
+*A new organization invitation token has been generated. Typically this token has been delivered to an invitee by some means.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -104,6 +104,45 @@ Events related to user management.
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
 | userType | String | User type |
+
+#### UserInvitationRevoked
+
+*An earlier created user invitation has been revoked.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| invitationId | String | Invitation id |
+| userId | String | User id |
+| userType | String | User type |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| requestId | String | Request id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+
+#### UserInvitationSent
+
+*User invitation has been sent to an invitee.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| invitationId | String | Invitation id |
+| userId | String | User id |
+| userType | String | User type |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| requestId | String | Request id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+
+#### UserInvitationTokenGenerated
+
+*A new user invitation token has been generated. Typically this token has been delivered to an invitee by some means.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| invitationId | String | Invitation id |
+| userId | String | User id |
+| userType | String | User type |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| requestId | String | Request id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 
 #### UserInvitedAndPreRegistered
 
@@ -249,6 +288,32 @@ Events for actions that user has done in the system.
 | userId | String | User id |
 | userType | String | User type |
 | oldUserName | String | Previous username |
+
+#### UserInvitationAccepted
+
+*User has accepted a user invitation.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| invitationId | String | Invitation id |
+| userId | String | User id |
+| userType | String | User type |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| requestId | String | Request id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+
+#### UserInvitationDeclined
+
+*User has declined a user invitation.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| invitationId | String | Invitation id |
+| userId | String | User id |
+| userType | String | User type |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| requestId | String | Request id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 
 #### UserLoggedOut
 

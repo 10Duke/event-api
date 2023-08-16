@@ -3,17 +3,11 @@ package com.tenduke.events.api.model.data;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * Event data fields for organization events.
+ * Event data fields for organization invitations.
  * @author roope
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface OrganizationInvitationFields {
-
-    /**
-     * Gets the organization invitation id.
-     * @return the invitation id.
-     */
-    String getInvitationId();
+public interface OrganizationInvitationFields extends InvitationFields {
 
     /**
      * Gets the organization id.
