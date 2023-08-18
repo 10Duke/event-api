@@ -43,7 +43,6 @@ Events related to user management.
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
-| userId | String | User id |
 | userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
@@ -58,7 +57,6 @@ Events related to user management.
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
-| userId | String | User id |
 | userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
@@ -73,7 +71,6 @@ Events related to user management.
 | organizationId | String | Organization id |
 | invitationId | String | Invitation id |
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
-| userId | String | User id |
 | userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
@@ -112,7 +109,6 @@ Events related to user management.
 | Field name | Type | Description |
 | ---        | ---  | ---         |
 | invitationId | String | Invitation id |
-| userId | String | User id |
 | userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
@@ -125,7 +121,6 @@ Events related to user management.
 | Field name | Type | Description |
 | ---        | ---  | ---         |
 | invitationId | String | Invitation id |
-| userId | String | User id |
 | userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
@@ -138,7 +133,6 @@ Events related to user management.
 | Field name | Type | Description |
 | ---        | ---  | ---         |
 | invitationId | String | Invitation id |
-| userId | String | User id |
 | userType | String | User type |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | requestId | String | Request id |
