@@ -71,7 +71,8 @@ public class PrintEventObjectFieldsTest {
     private static final List<Class<?>> LICENSE_MANAGEMENT_OBJS = Arrays.asList(
             LicenseConsumeAllowed.class,
             LicenseConsumeDenied.class,
-            LicenseReserved.class);
+            LicenseReserved.class,
+            LicenseReservationReleased.class);
 
     /**
      * Event data objects related to license consumption.

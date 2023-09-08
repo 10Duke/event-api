@@ -8,11 +8,11 @@ import com.tenduke.events.api.model.data.TimeFields;
 import com.tenduke.events.api.model.data.UserIdFields;
 
 /**
- * Event occurring when license reservation has been removed
+ * Event occurring when license reservation has been released
  * @author janne
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface LicenseReservationRemoved extends
+public interface LicenseReservationReleased extends
         LicenseAssignmentFields,
         UserIdFields,
         ErrorInfoFields,
