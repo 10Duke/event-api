@@ -491,7 +491,7 @@ Events related to license management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 
-#### LicenseReservationRemoved
+#### LicenseReservationReleased
 
 *License reservation has been removed from a user.*
 
