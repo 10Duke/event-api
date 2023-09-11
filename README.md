@@ -491,6 +491,26 @@ Events related to license management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 
+#### LicenseReservationReleased
+
+*License reservation has been removed from a user.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| licenseOwnerUserId | String | Id of licensee if licensee is a user |
+| licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licenseId | String | License id |
+| entitlementId | String | Entitlement id |
+| reservationType | String | Reservation type: "reserved" |
+| assignmentId | String | Assignment id |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
+| userId | String | Id of the user the reservation was removed from |
+| userType | String | Type of the user the reservation was removed from |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
 ### License consumption
 
 Events related to end users and client applications consuming licenses.
@@ -503,9 +523,11 @@ Events related to end users and client applications consuming licenses.
 | ---        | ---  | ---         |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| entitlementId | String | Entitlement id |
 | licensedItemId | String | Licensed item id |
 | licenseId | String | License id |
-| entitlementId | String | Entitlement id |
+| reservationType | String | Assignment reservation type "reserved" or unspecified for floating |
+| assignmentId | String | Assignment id |
 | licenseAnchors | List | List of [LicenseAnchorIdFields](#licenseanchoridfields) objects |
 | leaseId | String | Lease id |
 | consumptionMode | String | Consumption mode: "cache" for online use or "checkout" for offline use |
@@ -528,9 +550,11 @@ Events related to end users and client applications consuming licenses.
 | ---        | ---  | ---         |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| entitlementId | String | Entitlement id |
 | licensedItemId | String | Licensed item id |
 | licenseId | String | License id |
-| entitlementId | String | Entitlement id |
+| reservationType | String | Assignment reservation type "reserved" or unspecified for floating |
+| assignmentId | String | Assignment id |
 | licenseAnchors | List | List of [LicenseAnchorIdFields](#licenseanchoridfields) objects |
 | leaseId | String | Lease id |
 | consumptionMode | String | Consumption mode: "cache" for online use or "checkout" for offline use |
