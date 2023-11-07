@@ -568,6 +568,8 @@ Events related to end users and client applications consuming licenses.
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
+| consumedUseCount | Long | Use count consumed |
+| consumedUseTime | Long | Use time consumed |
 
 #### LicenseReleased
 
