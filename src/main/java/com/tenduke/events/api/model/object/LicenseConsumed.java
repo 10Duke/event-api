@@ -21,4 +21,16 @@ public interface LicenseConsumed extends
         ErrorInfoFields,
         TimeFields,
         RequestFields {
+
+    /**
+     * Gets use count consumed.
+     * @return use count consumed.
+     */
+    Long getConsumedUseCount();
+
+    /**
+     * Gets use time consumed.
+     * @return use time consumed.
+     */
+    Long getConsumedUseTime();
 }

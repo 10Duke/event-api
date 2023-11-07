@@ -38,10 +38,4 @@ public interface LicenseConsumptionFields extends LicenseLeaseFields {
      * @return Lease expiration in milliseconds since the Epoch (1970-01-01T00:00:00Z).
      */
     Long getGrantedUntil();
-
-    /**
-     * Gets use count consumed.
-     * @return use count consumed.
-     */
-    Long getConsumedUseCount();
 }
