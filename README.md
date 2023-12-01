@@ -248,8 +248,9 @@ Events for actions that user has done in the system.
 | userType | String | User type |
 | expiresIn | Long | Token lifetime, in seconds since `eventTime` |
 | refreshTokenIssued | Boolean | True if a refresh token was issued, false otherwise |
-| refreshTokenExpiresIn | Long | Refresh tokenlifetime, in seconds since `eventTime`  |
-| grantType | String | The OAuth 2.0 grant type  |
+| refreshTokenExpiresIn | Long | Refresh tokenlifetime, in seconds since `eventTime` |
+| grantType | String | The OAuth 2.0 grant type |
+| scope | String | The granted OAuth 2.0 scope as a space-delimited string |
 
 #### OrganizationInvitationDeclined
 

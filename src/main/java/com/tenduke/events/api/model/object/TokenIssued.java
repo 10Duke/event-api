@@ -39,4 +39,10 @@ public interface TokenIssued extends
      * @return The grant type value, must not be {@code null}.
      */
     String getGrantType();
+
+    /**
+     * Gets the granted OAuth 2.0 scope.
+     * @return The scope as a space-delimited string.
+     */
+    String getScope();
 }
