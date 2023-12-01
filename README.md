@@ -234,6 +234,24 @@ Events for actions that user has done in the system.
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 
+#### TokenIssued
+
+*OAuth 2.0 token has been issued*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| eventTime | Long | Token issued time, milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
+| userId | String | User id |
+| userType | String | User type |
+| expiresIn | Long | Token lifetime, in seconds since `eventTime` |
+| refreshTokenIssued | Boolean | True if a refresh token was issued, false otherwise |
+| refreshTokenExpiresIn | Long | Refresh tokenlifetime, in seconds since `eventTime` |
+| grantType | String | The OAuth 2.0 grant type |
+| scope | String | The granted OAuth 2.0 scope as a space-delimited string |
+
 #### OrganizationInvitationDeclined
 
 *User has declined organization invitation.*
