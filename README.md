@@ -236,7 +236,7 @@ Events for actions that user has done in the system.
 
 #### TokenIssued
 
-*User has been authenticated / logged in.*
+*OAuth 2.0 token has been issued*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
