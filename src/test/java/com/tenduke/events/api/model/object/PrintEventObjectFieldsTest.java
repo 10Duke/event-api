@@ -47,6 +47,7 @@ public class PrintEventObjectFieldsTest {
             ForgotPasswordReset.class,
             OrganizationInvitationAccepted.class,
             OrganizationInvitationDeclined.class,
+            TokenIssued.class,
             UserAuthenticated.class,
             UserEmailChanged.class,
             UserInvitationAccepted.class,
