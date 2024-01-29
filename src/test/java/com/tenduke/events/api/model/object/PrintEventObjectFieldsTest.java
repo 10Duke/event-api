@@ -10,6 +10,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -174,7 +175,7 @@ public class PrintEventObjectFieldsTest {
         }
 
         String fieldName = new StringBuilder(getterName.length())
-                .append(getterName.substring(getterPrefixLength, getterPrefixLength + 1).toLowerCase())
+                .append(getterName.substring(getterPrefixLength, getterPrefixLength + 1).toLowerCase(Locale.ROOT))
                 .append(getterName.substring(getterPrefixLength + 1))
                 .toString();
         String fieldType = fieldGetter.getReturnType().getSimpleName();
