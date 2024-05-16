@@ -1,6 +1,7 @@
 package com.tenduke.events.api.model.data;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import java.util.Date;
 
 /**
  * Event data fields for license operations that contain creation and provision data.
@@ -27,4 +28,16 @@ public interface LicenseProvisionFields extends LicenseFields {
      */
     Long getUseCount();
 
+
+    /**
+     * Gets the license validity start date.
+     * @return License validity start date. If <code>null</code>, the license is not considered valid.
+     */
+    Date getValidFrom();
+
+    /**
+     * Gets the license validity end date.
+     * @return License end date. If <code>null</code>, the license is considered perpetual (no fixed end date).
+     */
+    Date getValidUntil();
 }
