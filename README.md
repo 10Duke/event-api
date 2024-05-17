@@ -417,9 +417,11 @@ Events related to license provisioning.
 | useTime | Long | Granted use time |
 | useCount | Long | Granted use count |
 | seatCount | Integer | Granted seat count |
+| validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
+| validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
-| userId | String | User id |
-| userType | String | User type |
+| userId | String | Id of licensee if licensee is a user |
+| userType | String | Type of licensee if licensee is a user |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
