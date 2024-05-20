@@ -28,6 +28,11 @@ public interface LicenseProvisionFields extends LicenseFields {
      */
     Long getUseCount();
 
+    /**
+     * Number of seat reservations granted.
+     * @return The number of seat reservations granted.
+     */
+    Long seatReservations();
 
     /**
      * Gets the license validity start date.
