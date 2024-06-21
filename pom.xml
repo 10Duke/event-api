@@ -64,7 +64,7 @@
 
         <!-- Test dependencies -->
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
-        <tenduke.classgraph.version>4.8.102</tenduke.classgraph.version>
+        <tenduke.classgraph.version>4.8.112</tenduke.classgraph.version>
     </properties>
 
     <dependencies>
