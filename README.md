@@ -174,19 +174,6 @@ Events related to user management.
 | userType | String | User type |
 | oldUserName | String | Previous user name |
 
-#### UserValidationEmailSent
-
-*Email has been sent to user for validation the email address.*
-
-| Field name | Type | Description |
-| ---        | ---  | ---         |
-| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
-| requestId | String | Request id |
-| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
-| userId | String | User id |
-| userType | String | User type |
-
 ### User actions
 
 Events for actions that user has done in the system.
