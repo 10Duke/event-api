@@ -452,7 +452,7 @@ Events related to license provisioning.
 
 Events related to license management.
 
-#### LicenseConsumeAllowed
+#### LicenseConsumptionAllowed
 
 *License consumption has been allowed for a user.*
 
