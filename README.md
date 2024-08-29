@@ -134,7 +134,7 @@ Events related to user management.
 
 #### UserInvitedAndPreRegistered
 
-*User has been invited to use the system, user data has been prepopulated in the system.*
+*__DEPRECATED:__ User has been invited to use the system, user data has been prepopulated in the system.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -416,7 +416,7 @@ Events related to license provisioning.
 
 #### LicenseRevoked
 
-*License (license credits) has been revoked.*
+*__DEPRECATED:__ License (license credits) has been revoked.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -652,20 +652,6 @@ Audit trail events.
 #### Deleted
 
 *An entity has been deleted from the system.*
-
-| Field name | Type | Description |
-| ---        | ---  | ---         |
-| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
-| requestId | String | Request id |
-| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
-| userId | String | User id |
-| userType | String | User type |
-| objectName | String | Object type name |
-| objectId | String | Object id |
-
-#### Read
-
-*An entity has been read.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
