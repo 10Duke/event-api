@@ -17,4 +17,9 @@ public interface Deleted<R> extends
         RequestFields,
         UserIdFields,
         ObjectFields {
+    /**
+     * Gets final state of the object prior to deletion.
+     * @return The final state of the object prior to deletion.
+     */
+    R getOldFields();
 }
