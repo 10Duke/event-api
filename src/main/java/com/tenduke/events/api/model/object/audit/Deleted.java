@@ -18,8 +18,8 @@ public interface Deleted<R> extends
         UserIdFields,
         ObjectFields {
     /**
-     * Gets final state of the object before deletion.
-     * @return The final state of the object deleted.
+     * Gets final state of the object prior to deletion.
+     * @return The final state of the object prior to deletion.
      */
-    R getObjectFields();
+    R getOldFields();
 }

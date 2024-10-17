@@ -662,7 +662,7 @@ Audit trail events.
 | userType | String | User type |
 | objectName | String | Object type name |
 | objectId | String | Object id |
-| objectFields | Object | All fields of the deleted object at the moment of deletion |
+| oldFields | Object | All fields of the deleted object at the moment of deletion |
 
 #### Updated
 
