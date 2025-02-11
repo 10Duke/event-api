@@ -178,9 +178,39 @@ Events related to user management.
 
 Events for actions that user has done in the system.
 
+#### ActivateCredentialCompleted
+
+*User has successfully completed credential activation. For example, user has received email sent for resetting password and completed the password reset, or user has completed account activation by setting up a passkey.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
+| userId | String | User id |
+| userType | String | User type |
+| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process |
+
+#### ActivateCredentialStarted
+
+*Activating a new authentication credential for user has been started. For example, user has invoked "forgot password" and email for resetting password has been sent to the user.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
+| userId | String | User id |
+| userType | String | User type |
+| validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
+| validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
+| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process |
+
 #### ForgotPasswordEmailSent
 
-*User has invoked "forgot password" and email for resetting password has been sent to the user.*
+*DEPRECATED, `ActivateCredentialStarted` used since 10Duke Enterprise 6.0.0 instead. User has invoked "forgot password" and email for resetting password has been sent to the user.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -195,7 +225,7 @@ Events for actions that user has done in the system.
 
 #### ForgotPasswordReset
 
-*User has received email sent for resetting password and completed the password reset.*
+*DEPRECATED, `ActivateCredentialCompleted` used since 10Duke Enterprise 6.0.0 instead. User has received email sent for resetting password and completed the password reset.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
