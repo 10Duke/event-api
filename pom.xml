@@ -217,6 +217,25 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
             </plugin>
         </plugins>
+
+        <resources>
+            <!-- Enable filtering resources in META-INF/10duke -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>META-INF/10duke/*</include>
+                </includes>
+            </resource>
+            <!-- Do not use filtering elsewhere -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>META-INF/10duke/*</exclude>
+                </excludes>
+            </resource>
+        </resources>
     </build>
 
     <profiles>
