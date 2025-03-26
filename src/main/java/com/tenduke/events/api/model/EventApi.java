@@ -15,7 +15,7 @@ public final class EventApi {
     /**
      * Name of resource containing events-api properties.
      */
-    private static final String EVENTS_API_PROPERTIES_RESOURCE = "/META-INF/10duke/events-api.properties";
+    private static final String EVENTS_API_PROPERTIES_RESOURCE = "META-INF/10duke/events-api.properties";
 
     /**
      * Version of the event-api artifact.
