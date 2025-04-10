@@ -9,10 +9,10 @@ public interface CredentialActivationFields
         extends CredentialActivationStateFields {
 
     /**
-     * Activating a new password has been started by delivering a code to the
+     * Activating a new credential has been started by delivering a code to the
      * user ("forgot password" process, code usually sent by email).
      */
-    String CREDENTIAL_ACTIVATION_PROCESS_RESET_PASSWORD = "ResetPassword";
+    String CREDENTIAL_ACTIVATION_PROCESS_RESET_CREDENTIAL = "ResetCredential";
 
     /**
      * Activating user account has been started by delivering a code to the

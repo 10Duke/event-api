@@ -1,6 +1,7 @@
 package com.tenduke.events.api.model.data;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import java.util.UUID;
 
 /**
  * Event data fields common for all credential activation and deactivation events.
@@ -36,4 +37,10 @@ public interface CredentialActivationStateFields extends
      *      interface.
      */
     String getCredentialType();
+
+    /**
+     * Gets id of credential object related to the event.
+     * @return The credential object id.
+     */
+    UUID getCredentialObjectId();
 }
