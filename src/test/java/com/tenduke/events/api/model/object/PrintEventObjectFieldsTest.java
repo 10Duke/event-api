@@ -46,6 +46,7 @@ public class PrintEventObjectFieldsTest {
     private static final List<Class<?>> USER_ACTION_OBJS = Arrays.asList(
             CredentialActivated.class,
             CredentialActivationStarted.class,
+            CredentialDeactivated.class,
             ForgotPasswordEmailSent.class,
             ForgotPasswordReset.class,
             OrganizationInvitationAccepted.class,
