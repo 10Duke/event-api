@@ -14,7 +14,7 @@ import com.tenduke.events.api.model.data.UserIdFields;
  * @since 10Duke Enterprise 6.0.0
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface ActivateCredentialCompleted extends
+public interface CredentialActivated extends
         TimeFields,
         RequestFields,
         ErrorInfoFields,
@@ -25,7 +25,7 @@ public interface ActivateCredentialCompleted extends
      * user ("forgot password" process, code usually sent by email).
      */
     String CREDENTIAL_ACTIVATION_PROCESS_RESET_PASSWORD =
-            ActivateCredentialStarted.CREDENTIAL_ACTIVATION_PROCESS_RESET_PASSWORD;
+            CredentialActivationStarted.CREDENTIAL_ACTIVATION_PROCESS_RESET_PASSWORD;
 
     /**
      * Activating user account has been started by delivering a code to the
@@ -34,7 +34,7 @@ public interface ActivateCredentialCompleted extends
      * a passkey.
      */
     String CREDENTIAL_ACTIVATION_PROCESS_ACTIVATE_USER =
-            ActivateCredentialStarted.CREDENTIAL_ACTIVATION_PROCESS_ACTIVATE_USER;
+            CredentialActivationStarted.CREDENTIAL_ACTIVATION_PROCESS_ACTIVATE_USER;
 
     /**
      * Gets name of the credential activation process.

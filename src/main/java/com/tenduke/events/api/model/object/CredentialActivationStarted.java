@@ -16,7 +16,7 @@ import com.tenduke.events.api.model.data.ValidityFields;
  * @since 10Duke Enterprise 6.0.0
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface ActivateCredentialStarted extends
+public interface CredentialActivationStarted extends
         TimeFields,
         RequestFields,
         ErrorInfoFields,
