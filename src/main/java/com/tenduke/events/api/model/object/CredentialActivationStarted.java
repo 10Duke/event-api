@@ -2,6 +2,7 @@ package com.tenduke.events.api.model.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tenduke.events.api.model.data.CredentialActivationFields;
+import com.tenduke.events.api.model.data.ValidityFields;
 
 /**
  * Process for activating a new credential started. Examples of cases when new
@@ -13,6 +14,7 @@ import com.tenduke.events.api.model.data.CredentialActivationFields;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public interface CredentialActivationStarted extends
-        CredentialActivationFields {
+        CredentialActivationFields,
+        ValidityFields {
 
 }
