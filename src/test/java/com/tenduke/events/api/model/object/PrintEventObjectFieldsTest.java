@@ -44,8 +44,8 @@ public class PrintEventObjectFieldsTest {
      * Event data objects related to user actions.
      */
     private static final List<Class<?>> USER_ACTION_OBJS = Arrays.asList(
-            ActivateCredentialCompleted.class,
-            ActivateCredentialStarted.class,
+            CredentialActivated.class,
+            CredentialActivationStarted.class,
             ForgotPasswordEmailSent.class,
             ForgotPasswordReset.class,
             OrganizationInvitationAccepted.class,
