@@ -16,19 +16,19 @@ public interface CredentialActivationStateFields extends
         UserIdFields {
 
     /**
-     * Credential type "passkey".
+     * Credential type "WebAuthnCredential".
      */
-    String CREDENTIAL_TYPE_PASSKEY = "passkey";
+    String CREDENTIAL_TYPE_PASSKEY = "WebAuthnCredential";
 
     /**
-     * Credential type "password".
+     * Credential type "EmailAndPassword".
      */
-    String CREDENTIAL_TYPE_PASSWORD = "password";
+    String CREDENTIAL_TYPE_PASSWORD = "EmailAndPassword";
 
     /**
-     * Credential type "totp" (Time-based One-Time Password).
+     * Credential type "TimeBasedOTPCredential" (Time-based One-Time Password).
      */
-    String CREDENTIAL_TYPE_TOTP = "totp";
+    String CREDENTIAL_TYPE_TOTP = "TimeBasedOTPCredential";
 
     /**
      * Gets the credential type.
