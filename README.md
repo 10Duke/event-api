@@ -208,7 +208,7 @@ Events for actions that user has done in the system.
 | userType | String | User type |
 | validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
 | validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
-| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process |
+| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process, or name of a credential setting operation |
 | credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
 | credentialObjectId | String | Id of the credential configuration, if known by the sending context |
 
