@@ -9,7 +9,7 @@ import com.tenduke.events.api.model.data.UserIdFields;
 /**
  * User has reset her password (forgot password).
  * @author jarkko
- * @deprecated Replaced by {@link ActivateCredentialCompleted} that can describe
+ * @deprecated Replaced by {@link CredentialActivated} that is used for all
  *      all credential activation cases.
  */
 @Deprecated
