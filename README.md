@@ -190,9 +190,8 @@ Events for actions that user has done in the system.
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
 | userType | String | User type |
-| activationProcess | String | `ResetCredential` for the "forgot password" process, or `ActivateUser` for user account activation process |
+| activationProcess | String | `ResetCredential` for the "forgot password" process, or `ActivateUser` for user account activation process, or name of a credential setting operation |
 | credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
-| credentialObjectId | String | Id of the credential configuration, if known by the sending context |
 
 #### CredentialActivationStarted
 
@@ -208,9 +207,8 @@ Events for actions that user has done in the system.
 | userType | String | User type |
 | validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
 | validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
-| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process, or name of a credential setting operation |
+| activationProcess | String | `ResetCredential` for the "forgot password" process, or `ActivateUser` for user account activation process |
 | credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
-| credentialObjectId | String | Id of the credential configuration, if known by the sending context |
 
 #### CredentialDeactivated
 
@@ -225,7 +223,6 @@ Events for actions that user has done in the system.
 | userId | String | User id |
 | userType | String | User type |
 | credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
-| credentialObjectId | String | Id of the credential configuration, if known by the sending context |
 
 #### ForgotPasswordEmailSent
 

@@ -14,13 +14,4 @@ import com.tenduke.events.api.model.data.CredentialActivationFields;
 public interface CredentialActivated extends
         CredentialActivationFields {
 
-    /**
-     * Credential has been activated in user registration.
-     */
-    String CREDENTIAL_ACTIVATION_PROCESS_REGISTER_USER = "UserRegistered";
-
-    /**
-     * Credential has been activated in user creation.
-     */
-    String CREDENTIAL_ACTIVATION_PROCESS_CREATE_USER = "UserCreated";
 }
