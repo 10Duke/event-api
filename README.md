@@ -2,7 +2,7 @@
 
 Common API for using the Event Data service.
 
-## Events, version 1.9.0
+## Events, version 1.10.0
 
 Events described by this schema are listed below by category. Please notice that some events could belong to multiple categories, but here each event is listed in just one category according to the most common use case.
 
@@ -149,7 +149,7 @@ Events related to user management.
 
 #### UserPasswordCreated
 
-*Password has been created for a user.*
+*DEPRECATED, `CredentialActivated` used since 10Duke Enterprise 6.0.0 instead. Password has been created for a user.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -178,9 +178,9 @@ Events related to user management.
 
 Events for actions that user has done in the system.
 
-#### ActivateCredentialCompleted
+#### CredentialActivated
 
-*User has successfully completed credential activation. For example, user has received email sent for resetting password and completed the password reset, or user has completed account activation by setting up a passkey.*
+*New authentication credential has been activated for user. For example, user has added a passkey, or received email sent for resetting password and completed the password reset.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -190,9 +190,10 @@ Events for actions that user has done in the system.
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | User id |
 | userType | String | User type |
-| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process |
+| activationProcess | String | `ResetCredential` for the "forgot password" process, or `ActivateUser` for user account activation process, or name of a credential setting operation |
+| credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
 
-#### ActivateCredentialStarted
+#### CredentialActivationStarted
 
 *Activating a new authentication credential for user has been started. For example, user has invoked "forgot password" and email for resetting password has been sent to the user.*
 
@@ -206,11 +207,26 @@ Events for actions that user has done in the system.
 | userType | String | User type |
 | validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
 | validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
-| activationProcess | String | `ResetPassword` for the "forgot password" process, or `ActivateUser` for user account activation process |
+| activationProcess | String | `ResetCredential` for the "forgot password" process, or `ActivateUser` for user account activation process |
+| credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
+
+#### CredentialDeactivated
+
+*User's authentication credential has been deactivated.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
+| userId | String | User id |
+| userType | String | User type |
+| credentialType | String | Type of the activated credential, one of the following (or a custom value): `EmailAndPassword`, `WebAuthnCredential` or `TimeBasedOTPCredential` |
 
 #### ForgotPasswordEmailSent
 
-*DEPRECATED, `ActivateCredentialStarted` used since 10Duke Enterprise 6.0.0 instead. User has invoked "forgot password" and email for resetting password has been sent to the user.*
+*DEPRECATED, `CredentialActivationStarted` used since 10Duke Enterprise 6.0.0 instead. User has invoked "forgot password" and email for resetting password has been sent to the user.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -225,7 +241,7 @@ Events for actions that user has done in the system.
 
 #### ForgotPasswordReset
 
-*DEPRECATED, `ActivateCredentialCompleted` used since 10Duke Enterprise 6.0.0 instead. User has received email sent for resetting password and completed the password reset.*
+*DEPRECATED, `CredentialActivated` used since 10Duke Enterprise 6.0.0 instead. User has received email sent for resetting password and completed the password reset.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -353,7 +369,7 @@ Events for actions that user has done in the system.
 
 #### UserMfaActivated
 
-*User has activated MFA device for 2nd factor authentication.*
+*DEPRECATED, `CredentialActivated` used since 10Duke Enterprise 6.0.0 instead. User has activated MFA device for 2nd factor authentication.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
@@ -366,7 +382,7 @@ Events for actions that user has done in the system.
 
 #### UserMfaDeactivated
 
-*User has deactivated MFA device used for 2nd factor authentication.*
+*DEPRECATED, `CredentialDectivated` used since 10Duke Enterprise 6.0.0 instead. User has deactivated MFA device used for 2nd factor authentication.*
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |

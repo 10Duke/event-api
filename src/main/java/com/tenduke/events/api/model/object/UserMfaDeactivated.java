@@ -9,7 +9,10 @@ import com.tenduke.events.api.model.data.UserIdFields;
 /**
  * User multi factor authentication deactivated.
  * @author roope
+ * @deprecated Replaced by {@link CredentialDeactivated} that is used for all
+ *      all credential deactivation cases.
  */
+@Deprecated
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public interface UserMfaDeactivated extends
         TimeFields,
