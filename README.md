@@ -2,7 +2,7 @@
 
 Common API for using the Event Data service.
 
-## Events, version 1.11.0
+## Events, version 1.12.0
 
 Events described by this schema are listed below by category. Please notice that some events could belong to multiple categories, but here each event is listed in just one category according to the most common use case.
 
@@ -435,6 +435,28 @@ Events for actions that user has done in the system.
 ### License provisioning
 
 Events related to license provisioning.
+
+#### ActivationCodeBlocked
+
+*Activation code has been blocked and can not be used for license provisioning.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| code | String | Blocked activation code |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
+#### ActivationCodeUnblocked
+
+*Activation code has been unblocked and can be used again for license provisioning.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| code | String | Unblocked activation code |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
 
 #### LicenseProvisioned
 

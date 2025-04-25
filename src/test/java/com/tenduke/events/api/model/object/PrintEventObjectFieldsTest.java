@@ -67,6 +67,8 @@ public class PrintEventObjectFieldsTest {
      * Event data objects related to license provisioning.
      */
     private static final List<Class<?>> LICENSE_PROVISIONING_OBJS = Arrays.asList(
+            ActivationCodeBlocked.class,
+            ActivationCodeUnblocked.class,
             LicenseProvisioned.class,
             LicenseRevoked.class);
 
