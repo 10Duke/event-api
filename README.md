@@ -73,6 +73,35 @@ Events related to user management.
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 
+#### UserAddedToOrganizationGroup
+
+*User has been added to an organization group.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| organizationId | String | Organization id |
+| organizationGroupId | String | Organization group id |
+| organizationGroupType | String | Organization group type |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id |
+| userType | String | User type |
+
+#### UserAddedToOrganizationRole
+
+*User has been added to an organization role.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| organizationId | String | Organization id |
+| organizationRoleId | String | Organization role id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id |
+| userType | String | User type |
+
 #### UserCreated
 
 *User data has been created in the system.*
@@ -157,6 +186,35 @@ Events related to user management.
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
+| userId | String | User id |
+| userType | String | User type |
+
+#### UserRemovedFromOrganizationGroup
+
+*User has been removed from an organization group.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| organizationId | String | Organization id |
+| organizationGroupId | String | Organization group id |
+| organizationGroupType | String | Organization group type |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id |
+| userType | String | User type |
+
+#### UserRemovedFromOrganizationRole
+
+*User has been removed from an organization role.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| organizationId | String | Organization id |
+| organizationRoleId | String | Organization role id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | userId | String | User id |
 | userType | String | User type |
 
