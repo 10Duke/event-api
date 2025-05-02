@@ -2,7 +2,7 @@
 
 Common API for using the Event Data service.
 
-## Events, version 1.12.0
+## Events, version 1.13.0
 
 Events described by this schema are listed below by category. Please notice that some events could belong to multiple categories, but here each event is listed in just one category according to the most common use case.
 
