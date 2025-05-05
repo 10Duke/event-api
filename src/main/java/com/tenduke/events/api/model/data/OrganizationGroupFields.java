@@ -16,7 +16,13 @@ public interface OrganizationGroupFields extends OrganizationFields {
     String getOrganizationGroupId();
 
     /**
+     * <p>
      * Gets the organization group type.
+     * </p>
+     * <p>
+     * This field gets only populated if group type information exists in the context
+     * where event is triggered. In most cases this is left unpopulated.
+     * </p>
      * @return The organization group type.
      */
     String getOrganizationGroupType();

@@ -81,7 +81,6 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | organizationGroupId | String | Organization group id |
-| organizationGroupType | String | Organization group type |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
@@ -197,7 +196,6 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | organizationGroupId | String | Organization group id |
-| organizationGroupType | String | Organization group type |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
