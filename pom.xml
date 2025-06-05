@@ -4,7 +4,7 @@
 
     <groupId>com.tenduke.events</groupId>
     <artifactId>events-api</artifactId>
-    <version>1.13.1</version>
+    <version>1.13.2</version>
     <packaging>jar</packaging>
 
     <name>10Duke Event Data API model</name>
