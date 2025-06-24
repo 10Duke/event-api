@@ -18,4 +18,11 @@ public interface LicenseProvisioned extends
         ErrorInfoFields,
         TimeFields,
         RequestFields {
+
+    /**
+     * Gets activation code used to provision this license.
+     * @return Activation code used to provision this license. Returns <code>null</code> if the license was not provisioned using activation
+     * code.
+     */
+    String getActivationCode();
 }
