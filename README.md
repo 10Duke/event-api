@@ -531,6 +531,7 @@ Events related to license provisioning.
 | seatReservations | Long | Granted seat reservations |
 | validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
 | validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
+| activationCode | String | Activation code used to provision the license |
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | Id of licensee if licensee is a user |
 | userType | String | Type of licensee if licensee is a user |
