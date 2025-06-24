@@ -45,4 +45,11 @@ public interface LicenseProvisionFields extends LicenseFields {
      * @return License end date. If <code>null</code>, the license is considered perpetual (no fixed end date).
      */
     Date getValidUntil();
+
+    /**
+     * Gets activation code used to provision this license.
+     * @return Activation code used to provision this license. Returns <code>null</code> if the license was not provisioned using activation
+     * code.
+     */
+    String getActivationCode();
 }
