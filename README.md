@@ -523,6 +523,7 @@ Events related to license provisioning.
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
+| licensedItemName | String | Name of the licensed item the license was provisioned for |
 | licenseId | String | License id |
 | entitlementId | String | Entitlement id |
 | useTime | Long | Granted use time |
@@ -548,6 +549,7 @@ Events related to license provisioning.
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
+| licensedItemName | String | Name of the licensed item the license was revoked for |
 | licenseId | String | License id |
 | entitlementId | String | Entitlement id |
 | useTime | Long | Revoked use time |
