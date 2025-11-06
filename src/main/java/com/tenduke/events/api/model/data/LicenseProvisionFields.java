@@ -45,4 +45,10 @@ public interface LicenseProvisionFields extends LicenseFields {
      * @return License end date. If <code>null</code>, the license is considered perpetual (no fixed end date).
      */
     Date getValidUntil();
+
+    /**
+     * Gets name of licensed item the license was provisioned for.
+     * @return Name of licensed item the license was provisioned for.
+     */
+    String getLicensedItemName();
 }
