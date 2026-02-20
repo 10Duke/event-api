@@ -2,6 +2,7 @@ package com.tenduke.events.api.model.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tenduke.events.api.model.data.ErrorInfoFields;
+import com.tenduke.events.api.model.data.LicenseCreditAndValidityFields;
 import com.tenduke.events.api.model.data.LicenseProvisionFields;
 import com.tenduke.events.api.model.data.RequestFields;
 import com.tenduke.events.api.model.data.TimeFields;
@@ -25,4 +26,10 @@ public interface LicenseProvisioned extends
      * code.
      */
     String getActivationCode();
+
+    /**
+     * Gets previous state of the license.
+     * @return Previous state of the license if an existing license was update, otherwise null.
+     */
+    LicenseCreditAndValidityFields getPreviousState();
 }

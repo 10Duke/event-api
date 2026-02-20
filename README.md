@@ -520,6 +520,10 @@ Events related to license provisioning.
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
+| transactionExternalId | String | License transaction external id |
+| transactionType | String | License transaction type |
+| transactionItemExternalId | String | License transaction item external id |
+| previousState | LicenseData | [LicenseData](#licensedata) Complex object indicating previous state of the license, null if a new license was provisioned. |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
@@ -828,3 +832,12 @@ Event object field value types.
 | ---        | ---  | ---         |
 | licenseAnchorType | String | Type name of the license anchor object |
 | licenseAnchorId | String | Id of the license anchor object |
+
+#### LicenseData
+| seatCount | Integer | Granted seat count |
+| seatReservations | Long | Granted seat reservations |
+| useTime | Long | Granted use time |
+| useCount | Long | Granted use count |
+| validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
+| validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
+
