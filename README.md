@@ -520,10 +520,10 @@ Events related to license provisioning.
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
-| transactionExternalId | String | License transaction external id |
-| transactionType | String | License transaction type |
-| transactionItemExternalId | String | License transaction item external id |
-| previousState | LicenseData | [LicenseData](#licensedata) Complex object indicating previous state of the license, null if a new license was provisioned. |
+| transactionExternalId | String | The external identifier of the transaction in the client system, such as an order number. |
+| transactionType | String | The type of the transaction, such as Order, SubscriptionRenew, CodeActivation, or Trial. |
+| transactionItemExternalId | String | The external identifier of the transaction item in the client system, such as an order line number. |
+| previousState | LicenseData | [LicenseData](#licensedata) Object indicating previous state of the license, null if a new license was provisioned. |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
@@ -550,9 +550,9 @@ Events related to license provisioning.
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
-| transactionExternalId | String | License transaction external id |
-| transactionType | String | License transaction type |
-| transactionItemExternalId | String | License transaction item external id |
+| transactionExternalId | String | The external identifier of the transaction in the client system, such as an order number. |
+| transactionType | String | The type of the transaction, such as Order, SubscriptionRenew, CodeActivation, or Trial. |
+| transactionItemExternalId | String | The external identifier of the transaction item in the client system, such as an order line number. |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
@@ -569,9 +569,9 @@ Events related to license provisioning.
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
-| transactionExternalId | String | License transaction external id |
-| transactionType | String | License transaction type |
-| transactionItemExternalId | String | License transaction item external id |
+| transactionExternalId | String | The external identifier of the transaction in the client system, such as an order number. |
+| transactionType | String | The type of the transaction, such as Order, SubscriptionRenew, CodeActivation, or Trial. |
+| transactionItemExternalId | String | The external identifier of the transaction item in the client system, such as an order line number. |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
