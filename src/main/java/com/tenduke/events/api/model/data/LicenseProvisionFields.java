@@ -7,29 +7,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author roope
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface LicenseProvisionFields extends LicenseFields, LicenseCreditAndValidityFields {
+public interface LicenseProvisionFields extends LicenseFields, LicenseCreditAndValidityFields, LicenseTransactionItemFields {
 
     /**
      * Gets name of licensed item the license was provisioned for.
      * @return Name of licensed item the license was provisioned for.
      */
     String getLicensedItemName();
-
-    /**
-     * Get license transaction external id.
-     * @return license transaction external id.
-     */
-    String getTransactionExternalId();
-
-    /**
-     * Get license transaction type.
-     * @return license transaction type.
-     */
-    String getTransactionType();
-
-    /**
-     * Get license transaction item external id.
-     * @return license transaction item external id.
-     */
-    String getTransactionItemExternalId();
 }

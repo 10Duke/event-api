@@ -544,6 +544,44 @@ Events related to license provisioning.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 
+#### LicenseSuspended
+
+*License has been suspended.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| transactionExternalId | String | License transaction external id |
+| transactionType | String | License transaction type |
+| transactionItemExternalId | String | License transaction item external id |
+| licenseOwnerUserId | String | Id of licensee if licensee is a user |
+| licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licensedItemName | String | Name of the licensed item the license was provisioned for |
+| licenseId | String | License id |
+| entitlementId | String | Entitlement id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
+#### LicenseResumed
+
+*License has been resumed from suspension.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| transactionExternalId | String | License transaction external id |
+| transactionType | String | License transaction type |
+| transactionItemExternalId | String | License transaction item external id |
+| licenseOwnerUserId | String | Id of licensee if licensee is a user |
+| licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licensedItemName | String | Name of the licensed item the license was provisioned for |
+| licenseId | String | License id |
+| entitlementId | String | Entitlement id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
 #### LicenseRevoked
 
 *__DEPRECATED:__ License (license credits) has been revoked.*
