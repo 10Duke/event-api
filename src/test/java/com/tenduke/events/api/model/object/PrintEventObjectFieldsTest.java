@@ -74,6 +74,8 @@ public class PrintEventObjectFieldsTest {
             ActivationCodeBlocked.class,
             ActivationCodeUnblocked.class,
             LicenseProvisioned.class,
+            LicenseSuspended.class,
+            LicenseResumed.class,
             LicenseRevoked.class);
 
     /**

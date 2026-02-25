@@ -520,6 +520,10 @@ Events related to license provisioning.
 
 | Field name | Type | Description |
 | ---        | ---  | ---         |
+| transactionExternalId | String | The external identifier of the transaction in the client system, such as an order number. |
+| transactionType | String | The type of the transaction, such as Order, SubscriptionRenew, CodeActivation, or Trial. |
+| transactionItemExternalId | String | The external identifier of the transaction item in the client system, such as an order line number. |
+| previousState | LicenseData | [LicenseData](#licensedata) Object indicating previous state of the license, null if a new license was provisioned. |
 | licenseOwnerUserId | String | Id of licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
 | licensedItemId | String | Licensed item id |
@@ -536,6 +540,42 @@ Events related to license provisioning.
 | technicalUser | Boolean | DEPRECATED and will be replaced by userType. True if userId represents a technical user, false or not specified otherwise. |
 | userId | String | Id of licensee if licensee is a user |
 | userType | String | Type of licensee if licensee is a user |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
+#### LicenseSuspended
+
+*License has been suspended.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| transactionExternalId | String | The external identifier of the transaction in the client system, such as an order number. |
+| transactionType | String | The type of the transaction, such as Order, SubscriptionRenew, CodeActivation, or Trial. |
+| transactionItemExternalId | String | The external identifier of the transaction item in the client system, such as an order line number. |
+| licenseOwnerUserId | String | Id of licensee if licensee is a user |
+| licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licenseId | String | License id |
+| entitlementId | String | Entitlement id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
+#### LicenseResumed
+
+*License has been resumed from suspension.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| transactionExternalId | String | The external identifier of the transaction in the client system, such as an order number. |
+| transactionType | String | The type of the transaction, such as Order, SubscriptionRenew, CodeActivation, or Trial. |
+| transactionItemExternalId | String | The external identifier of the transaction item in the client system, such as an order line number. |
+| licenseOwnerUserId | String | Id of licensee if licensee is a user |
+| licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licenseId | String | License id |
+| entitlementId | String | Entitlement id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -828,3 +868,17 @@ Event object field value types.
 | ---        | ---  | ---         |
 | licenseAnchorType | String | Type name of the license anchor object |
 | licenseAnchorId | String | Id of the license anchor object |
+
+#### LicenseData
+
+*License credits and validity information*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| seatCount | Integer | Granted seat count |
+| seatReservations | Long | Granted seat reservations |
+| useTime | Long | Granted use time |
+| useCount | Long | Granted use count |
+| validFrom | Long | Validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified invalid / validity not started |
+| validUntil | Long | Validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified for indefinite validity |
+
