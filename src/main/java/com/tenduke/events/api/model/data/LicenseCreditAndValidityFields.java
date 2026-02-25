@@ -1,11 +1,13 @@
 package com.tenduke.events.api.model.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.Date;
 
 /**
  * Event data fields for license credits and validity period.
  * @author janne
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public interface LicenseCreditAndValidityFields {
 
     /**

@@ -6,7 +6,7 @@ import com.tenduke.events.api.model.data.LicenseTransactionItemFields;
 import com.tenduke.events.api.model.data.RequestFields;
 
 /**
- * Event indicating that a license  was resumed from suspension..
+ * Event indicating that a license  was resumed from suspension.
  * @author janne
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
