@@ -686,6 +686,48 @@ Events related to license management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 
+#### LicenseCreditsSplit
+
+*License (license credits) has been split.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| licenseOwnerUserId | String | Id of licensee if source license licensee is a user |
+| licenseOwnerOrganizationId | String | Id of source license licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licensedItemName | String | Name of the licensed item the license was provisioned for |
+| entitlementId | String | Source entitlement id |
+| licenseId | String | Source license id |
+| tgtEntitlementId | String | Target entitlement id |
+| tgtLicenseId | String | Target license id |
+| seatCount | Integer | Split seat count |
+| validFrom | Long | Split validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| validUntil | Long | Split validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified when following source license expiration |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
+#### LicenseCreditsMergedBack
+
+*License (license credits) has been merged back/delayed merge.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| licenseOwnerUserId | String | Id of licensee if source license licensee is a user |
+| licenseOwnerOrganizationId | String | Id of source license licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licensedItemName | String | Name of the licensed item the license was provisioned for |
+| licenseId | String | License id |
+| srcEntitlementId | String | Source entitlement id |
+| tgtEntitlementId | String | Target entitlement id |
+| mergedSeatCount | Integer | Seat count merged back|
+| remainingSeatCount | Integer | Seat count remaining in the split|
+| validFrom | Long | Split validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| validUntil | Long | Split validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC). May be in future indicating delayed merge. |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+
 ### License consumption
 
 Events related to end users and client applications consuming licenses.
