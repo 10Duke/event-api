@@ -2,6 +2,8 @@ package com.tenduke.events.api.model.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tenduke.events.api.model.data.ExpiringLicenseFields;
+import com.tenduke.events.api.model.data.RequestFields;
+import com.tenduke.events.api.model.data.TimeFields;
 import java.util.List;
 
 /**
@@ -9,7 +11,7 @@ import java.util.List;
  * @author jarkko
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public interface LicensesExpiring {
+public interface LicensesExpiring extends TimeFields, RequestFields {
 
     /**
      * Gets time after which the licenses are expiring.
