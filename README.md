@@ -602,6 +602,28 @@ Events related to license provisioning.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 
+#### LicenseExpiring
+
+*License is expiring or has expired.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| expiringAfter | Long | Start of expiration check window in milliseconds since 1970-01-01T00:00:00Z (UTC), exclusive. |
+| expiringBefore | Long | End of expiration check window in milliseconds since 1970-01-01T00:00:00Z (UTC), inclusive. |
+| expirationPeriod | String | The expiration period for which license expiration is checked, as an ISO 8601 formatted period. `licenses` include new licenses that have entered the expiration check window when checking expirations for this period. |
+| licenses | List | List of expiring or expired licenses. |
+
+Fields of each license in `licenses`:
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| validUntil | Long | License validity end time in milliseconds since 1970-01-01T00:00:00Z (UTC). |
+| licenseOwnerUserId | String | Id of licensee if licensee is a user |
+| licenseOwnerOrganizationId | String | Id of licensee if licensee is an organization |
+| licensedItemId | String | Licensed item id |
+| licenseId | String | License id |
+| entitlementId | String | Entitlement id |
+
 ### License management
 
 Events related to license management.
