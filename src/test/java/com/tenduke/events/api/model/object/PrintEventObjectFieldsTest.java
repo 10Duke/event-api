@@ -76,7 +76,8 @@ public class PrintEventObjectFieldsTest {
             LicenseProvisioned.class,
             LicenseSuspended.class,
             LicenseResumed.class,
-            LicenseRevoked.class);
+            LicenseRevoked.class,
+            LicensesExpiring.class);
 
     /**
      * Event data objects related to license management.
