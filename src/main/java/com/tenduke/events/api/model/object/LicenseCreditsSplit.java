@@ -19,4 +19,9 @@ public interface LicenseCreditsSplit extends
         TimeFields,
         RequestFields {
 
+    /**
+     * Gets split seat count.
+     * @return split seat count.
+     */
+    Integer getSplitSeatCount();
 }

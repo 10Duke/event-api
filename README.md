@@ -721,10 +721,11 @@ Events related to license management.
 | entitlementId | String | Id of entitlement of the license credits were split to |
 | licenseId | String | Id of license the credits were split to |
 | sourceLicenseId | String | Id of the source license the credits were split from |
-| seatCount | Integer | Split seat count |
-| useTime | Long | Split use time (not in use yet) |
-| useCount | Long | Split use count (not in use yet) |
-| seatReservations | Long | Split seat reservations (not in use yet) |
+| splitSeatCount | Integer | Seat count split from source license |
+| seatCount | Integer | Seats in split after the operation |
+| seatReservations | Long | Seat reservation credits in split after the operation |
+| useTime | Long | Use time in split after the operation |
+| useCount | Long | Use count in split after the operation |
 | validFrom | Long | Split validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | validUntil | Long | Split validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified when following source license expiration |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
@@ -744,10 +745,11 @@ Events related to license management.
 | licenseId | String | License split id the credits were merged back from |
 | entitlementId | String | Id of entitlement of the license the credits were merged back from |
 | sourceLicenseId | String | Id of the source license the credits were merged back to |
-| seatCount | Integer | Merged seat count |
-| useTime | Long | Merged use time (not in use yet) |
-| useCount | Long | Merged use count (not in use yet) |
-| seatReservations | Long | Merged seat reservations (not in use yet) |
+| mergedSeatCount | Integer | Seat count immediately merged back to source license |
+| seatCount | Integer | Seats in split after the operation. If full merge back requested this indicates the seats in delayed merge. |
+| seatReservations | Long | Seat reservation credits in split after the operation |
+| useTime | Long | Use time in split after the operation |
+| useCount | Long | Use count in split after the operation |
 | validFrom | Long | Split validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | validUntil | Long | Split validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC). May be in future indicating delayed merge. |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |

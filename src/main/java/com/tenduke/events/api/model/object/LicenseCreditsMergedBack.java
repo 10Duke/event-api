@@ -19,4 +19,9 @@ public interface LicenseCreditsMergedBack extends
         TimeFields,
         RequestFields {
 
+    /**
+     * Gets merged seat count.
+     * @return merged seat count.
+     */
+    Integer getMergedSeatCount();
 }
