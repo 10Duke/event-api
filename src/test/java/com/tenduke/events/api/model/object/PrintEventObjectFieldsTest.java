@@ -86,7 +86,9 @@ public class PrintEventObjectFieldsTest {
             LicenseConsumeAllowed.class,
             LicenseConsumeDenied.class,
             LicenseReserved.class,
-            LicenseReservationReleased.class);
+            LicenseReservationReleased.class,
+            LicenseCreditsSplit.class,
+            LicenseCreditsMergedBack.class);
 
     /**
      * Event data objects related to license consumption.
