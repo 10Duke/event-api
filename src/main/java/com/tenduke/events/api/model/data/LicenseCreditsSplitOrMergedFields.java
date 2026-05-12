@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public interface LicenseCreditsSplitOrMergedFields extends LicenseFields, LicenseCreditAndValidityFields {
 
     /**
-     * Gets name of licensed item the license credits were split for,
+     * Gets name of licensed item the license credits were split for.
      * @return Name of licensed item the license credits were split for.
      */
     String getLicensedItemName();
