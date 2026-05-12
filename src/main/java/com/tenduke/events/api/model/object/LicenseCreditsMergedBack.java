@@ -8,8 +8,8 @@ import com.tenduke.events.api.model.data.TimeFields;
 import com.tenduke.events.api.model.data.UserIdFields;
 
 /**
- * Event occurring when license credits has been merged back to source license.
- * @author roope
+ * Event occurring when license credits have been merged back to source license.
+ * @author janne
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public interface LicenseCreditsMergedBack extends

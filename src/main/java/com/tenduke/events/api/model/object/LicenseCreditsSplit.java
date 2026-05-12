@@ -9,7 +9,7 @@ import com.tenduke.events.api.model.data.UserIdFields;
 
 /**
  * Event occurring when license credits has been split from source license.
- * @author roope
+ * @author janne
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public interface LicenseCreditsSplit extends

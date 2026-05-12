@@ -716,18 +716,18 @@ Events related to license management.
 | ---        | ---  | ---         |
 | licenseOwnerUserId | String | Id of split license licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of split license licensee if licensee is an organization |
-| licensedItemId | String | Licensed item id |
-| licensedItemName | String | Name of the licensed item the license was provisioned for |
-| entitlementId | String | Id of entitlement of the license credits were split to |
-| licenseId | String | Id of license the credits were split to |
+| licensedItemId | String | Id of the licensed item the license were split for |
+| licensedItemName | String | Name of the licensed item the license were split for |
 | sourceLicenseId | String | Id of the source license the credits were split from |
+| entitlementId | String | Id of the entitlement receiving the split credits |
+| licenseId | String | Id of split license receiving the split credits |
 | splitSeatCount | Integer | Seat count split from source license |
-| seatCount | Integer | Seats in split after the operation |
-| seatReservations | Long | Seat reservation credits in split after the operation |
-| useTime | Long | Use time in split after the operation |
-| useCount | Long | Use count in split after the operation |
-| validFrom | Long | Split validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
-| validUntil | Long | Split validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified when following source license expiration |
+| seatCount | Integer | Seats in split license after the operation |
+| seatReservations | Long | Seat reservation credits in split license after the operation |
+| useTime | Long | Use time in split license after the operation |
+| useCount | Long | Use count in split license after the operation |
+| validFrom | Long | Split license validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| validUntil | Long | Split license validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC), or unspecified when following source license expiration |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
@@ -740,18 +740,18 @@ Events related to license management.
 | ---        | ---  | ---         |
 | licenseOwnerUserId | String | Id of split license licensee if licensee is a user |
 | licenseOwnerOrganizationId | String | Id of split license licensee if licensee is an organization |
-| licensedItemId | String | Licensed item id |
-| licensedItemName | String | Name of the licensed item the license was provisioned for |
-| licenseId | String | License split id the credits were merged back from |
-| entitlementId | String | Id of entitlement of the license the credits were merged back from |
+| licensedItemId | String | Id of the licensed item the license were merged back for |
+| licensedItemName | String | Name of the licensed item the license were merged back for |
 | sourceLicenseId | String | Id of the source license the credits were merged back to |
+| entitlementId | String | Id of entitlement the license the credits were merged back from |
+| licenseId | String | Id of the split license the credits were merged back from |
 | mergedSeatCount | Integer | Seat count immediately merged back to source license |
-| seatCount | Integer | Seats in split after the operation. If full merge back requested this indicates the seats in delayed merge. |
-| seatReservations | Long | Seat reservation credits in split after the operation |
-| useTime | Long | Use time in split after the operation |
-| useCount | Long | Use count in split after the operation |
-| validFrom | Long | Split validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
-| validUntil | Long | Split validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC). May be in future indicating delayed merge. |
+| seatCount | Integer | Seats in split license after the operation. If full merge back requested this indicates the seats in delayed merge. |
+| seatReservations | Long | Seat reservation credits in split license after the operation |
+| useTime | Long | Use time in split license after the operation |
+| useCount | Long | Use count in split license after the operation |
+| validFrom | Long | Split license validity start time as milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| validUntil | Long | Split license validity end time as milliseconds since 1970-01-01T00:00:00Z (UTC). May be in future indicating delayed merge. |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
