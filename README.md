@@ -73,6 +73,20 @@ Events related to user management.
 | requestId | String | Request id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 
+#### UserAddedToClientRole
+
+*User has been added to a client role.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| clientApplicationId | String | Client id |
+| clientRoleId | String | Client role id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id of the user added to client role |
+| userType | String | User type |
+
 #### UserAddedToOrganizationGroup
 
 *User has been added to an organization group.*
@@ -95,6 +109,19 @@ Events related to user management.
 | ---        | ---  | ---         |
 | organizationId | String | Organization id |
 | organizationRoleId | String | Organization role id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id of the user added to role |
+| userType | String | User type |
+
+#### UserAddedToRole
+
+*User has been added to a role (to a global internal role).*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| roleId | String | Role id |
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
@@ -188,6 +215,20 @@ Events related to user management.
 | userId | String | User id |
 | userType | String | User type |
 
+#### UserRemovedFromClientRole
+
+*User has been removed from a client role.*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| clientApplicationId | String | Client id |
+| clientRoleId | String | Client role id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id of the user removed from client role |
+| userType | String | User type |
+
 #### UserRemovedFromOrganizationGroup
 
 *User has been removed from an organization group.*
@@ -214,6 +255,19 @@ Events related to user management.
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
 | userId | String | User id of the user removed from organization role |
+| userType | String | User type |
+
+#### UserRemovedFromRole
+
+*User has been removed from a role (from a global internal role).*
+
+| Field name | Type | Description |
+| ---        | ---  | ---         |
+| roleId | String | Role id |
+| eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
+| requestId | String | Request id |
+| errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
+| userId | String | User id of the user removed from role |
 | userType | String | User type |
 
 #### UserUpdated
