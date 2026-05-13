@@ -112,7 +112,7 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| userId | String | User id of the user added to role |
+| userId | String | User id of the user added to organization role |
 | userType | String | User type |
 
 #### UserAddedToRole
@@ -125,7 +125,7 @@ Events related to user management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 | errorInfo | ErrorInfo | [ErrorInfo](#errorinfo) object describing error if an error occurred |
-| userId | String | User id of the user added to organization role |
+| userId | String | User id of the user added to role |
 | userType | String | User type |
 
 #### UserCreated
