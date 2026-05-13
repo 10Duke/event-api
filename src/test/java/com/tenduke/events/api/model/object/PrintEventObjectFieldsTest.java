@@ -30,8 +30,10 @@ public class PrintEventObjectFieldsTest {
             OrganizationInvitationRevoked.class,
             OrganizationInvitationSent.class,
             OrganizationInvitationTokenGenerated.class,
+            UserAddedToClientRole.class,
             UserAddedToOrganizationGroup.class,
             UserAddedToOrganizationRole.class,
+            UserAddedToRole.class,
             UserCreated.class,
             UserDeleted.class,
             UserInvitationRevoked.class,
@@ -39,8 +41,10 @@ public class PrintEventObjectFieldsTest {
             UserInvitationTokenGenerated.class,
             UserInvitedAndPreRegistered.class,
             UserPasswordCreated.class,
+            UserRemovedFromClientRole.class,
             UserRemovedFromOrganizationGroup.class,
             UserRemovedFromOrganizationRole.class,
+            UserRemovedFromRole.class,
             UserUpdated.class,
             UserValidationEmailSent.class);
 

@@ -3,7 +3,7 @@ package com.tenduke.events.api.model.data;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
- * Event data fields for identifying an organization.
+ * Event data fields for identifying an organization role.
  * @author jarkko
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
