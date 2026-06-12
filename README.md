@@ -812,7 +812,7 @@ Events related to license management.
 
 #### EntitlementGrantedToOrganizationGroup
 
-* Access to an Entitlement has been granted to an Organization Group. *
+*Access to an Entitlement has been granted to an Organization Group.*
 
 | Field name                     | Type      | Description                                       |
 |--------------------------------|-----------|---------------------------------------------------|
@@ -825,7 +825,7 @@ Events related to license management.
 
 #### EntitlementRevokedFromOrganizationGroup
 
-* Access to an Entitlement has been revoked from an Organization Group. *
+*Access to an Entitlement has been revoked from an Organization Group.*
 
 | Field name                     | Type      | Description                                       |
 |--------------------------------|-----------|---------------------------------------------------|
