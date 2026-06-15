@@ -810,6 +810,32 @@ Events related to license management.
 | eventTime | Long | Milliseconds since 1970-01-01T00:00:00Z (UTC) |
 | requestId | String | Request id |
 
+#### EntitlementGrantedToOrganizationGroup
+
+*Access to an Entitlement has been granted to an Organization Group.*
+
+| Field name                     | Type      | Description                                       |
+|--------------------------------|-----------|---------------------------------------------------|
+| entitlementId                  | String    | Id of the entitlement                             |
+| subjectId                      | String    | Id of the grantee                                 |
+| entitlementOwnerOrganizationId | String    | Id of the Organization which owns the Entitlement |
+| entitlementOwnerUserId         | String    | Id of the User who owns the Entitlement           |
+| eventTime                      | Long      | Milliseconds since 1970-01-01T00:00:00Z (UTC)     |
+| requestId                      | String    | Request id                                        |
+
+#### EntitlementRevokedFromOrganizationGroup
+
+*Access to an Entitlement has been revoked from an Organization Group.*
+
+| Field name                     | Type      | Description                                       |
+|--------------------------------|-----------|---------------------------------------------------|
+| entitlementId                  | String    | Id of the entitlement                             |
+| subjectId                      | String    | Id of the revokee                                 |
+| entitlementOwnerOrganizationId | String    | Id of the Organization which owns the Entitlement |
+| entitlementOwnerUserId         | String    | Id of the User who owns the Entitlement           |
+| eventTime                      | Long      | Milliseconds since 1970-01-01T00:00:00Z (UTC)     |
+| requestId                      | String    | Request id                                        |
+
 ### License consumption
 
 Events related to end users and client applications consuming licenses.
