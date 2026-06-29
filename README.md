@@ -1,7 +1,7 @@
 # EventApi
 
 >
-> :warning: **This repository is now in maintenance mode. Documentation of the API will be moved to [10Duke Enterprise documentation](https://docs.enterprise.10duke.com/)**
+> :warning: **This repository is now in maintenance mode. Documentation of the API will be moved to [10Duke Enterprise documentation](https://docs.enterprise.10duke.com/).**
 >
 
 Common API for using the Event Data service.
